@@ -1,5 +1,5 @@
 <template>
-  <div>
+  
     <div class="col-6">
       <div
         class="card"
@@ -145,7 +145,6 @@
         </div>
       </div>
     </div>
-  </div>
 </template>
 <script setup>
 import { ref, onMounted } from "vue";
