@@ -82,7 +82,7 @@
               data-bs-toggle="modal"
               data-bs-target="#agregarDatosModal"
             >
-              <img src="armchair.png" style="width: 30px; height: 30px" />
+              <img src="./armchair.png" style="width: 30px; height: 30px" />
               {{ seatNumber }}
             </button>
           </div>
