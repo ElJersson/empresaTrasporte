@@ -1,4 +1,5 @@
 <template>
+<div>
   <div class="col-6">
     <div class="card" style="background-color: #303082f0; border-radius: 20px">
       <div class="card-body">
@@ -115,6 +116,7 @@
         </div>
       </div>
     </div>
+  </div>
   </div>
 </template>
 
