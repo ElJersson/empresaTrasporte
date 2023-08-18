@@ -6,7 +6,7 @@ export const useAdministradorStore =defineStore(
         // lista de administrativos
         const getAdministrador = async () => {
             try {
-              let res = await axios.get("http://localhost:4500/api/administrador");
+              let res = await axios.get("https://empresatrasporte.onrender.com/api/administrador");
               console.log(res);
               return res.data.buses; 
             } catch (error) {
@@ -19,7 +19,7 @@ export const useAdministradorStore =defineStore(
 
           const iniciarSesion = async (email, password) => {
             try {
-              const response = await axios.post("http://localhost:4500/api/administrador/inicio-sesion", { email, password });
+              const response = await axios.post("https://empresatrasporte.onrender.com/api/administrador/inicio-sesion", { email, password });
               return response.data; // Puedes ajustar lo que quieres devolver aquí
             } catch (error) {
               throw new Error(error.response?.data?.message || "Error en el inicio de sesión");

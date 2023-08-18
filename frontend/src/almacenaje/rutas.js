@@ -5,7 +5,7 @@ export const useRutasStore =defineStore(
 
       const addRuta = async (info) => {
         try {
-          let res = await axios.post("http://localhost:4500/api/rutas", info);
+          let res = await axios.post("https://empresatrasporte.onrender.com/api/rutas", info);
           return res.data; // Devolvemos solo la propiedad data de la respuesta
         } catch (error) {
           console.log(error);
@@ -15,7 +15,7 @@ export const useRutasStore =defineStore(
         // editar Ruta 
         const updateRuta = async (id, info) => {
           try {
-            let res = await axios.put(`http://localhost:4500/api/rutas/${id}`, info);
+            let res = await axios.put(`https://empresatrasporte.onrender.com/api/rutas/${id}`, info);
             return res;
           } catch (error) {
             console.log(error);
@@ -25,7 +25,7 @@ export const useRutasStore =defineStore(
         // editar estado Ruta 
         const putRutaEstado = async (id, estado) => {
           try {
-            let res = await axios.put(`http://localhost:4500/api/rutas/estado/${id}`, {estado:estado});
+            let res = await axios.put(`https://empresatrasporte.onrender.com/api/rutas/estado/${id}`, {estado:estado});
             return res;
           } catch (error) {
             console.log(error);
@@ -37,7 +37,7 @@ export const useRutasStore =defineStore(
         // lista de Ruta
         const getRuta = async () => {
             try {
-              let res = await axios.get("http://localhost:4500/api/rutas");
+              let res = await axios.get("https://empresatrasporte.onrender.com/api/rutas");
               console.log(res);
               return res.data.rutas; 
             } catch (error) {
@@ -48,7 +48,7 @@ export const useRutasStore =defineStore(
         // eliminart Ruta 
         const deleteRuta = async (id, info) => {
           try {
-            let res = await axios.delete(`http://localhost:4500/api/rutas/${id}`, info);
+            let res = await axios.delete(`https://empresatrasporte.onrender.com/api/rutas/${id}`, info);
             return res;
           } catch (error) {
             console.log(error);

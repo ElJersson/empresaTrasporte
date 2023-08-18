@@ -6,7 +6,7 @@ export const useConductorStore =defineStore(
         // agregar conductor
         const addConductor = async(info)=>{
             try {
-                let res = await axios.post("http://localhost:4500/api/conductor",info)
+                let res = await axios.post("https://empresatrasporte.onrender.com/api/conductor",info)
                 return res
             } catch (error) {
                 console.log(error);
@@ -16,7 +16,7 @@ export const useConductorStore =defineStore(
         // editar conductor
         const updateConductor = async (id, info) => {
           try {
-            let res = await axios.put(`http://localhost:4500/api/conductor/${id}`, info);
+            let res = await axios.put(`https://empresatrasporte.onrender.com/api/conductor/${id}`, info);
             return res;
           } catch (error) {
             console.log(error);
@@ -26,7 +26,7 @@ export const useConductorStore =defineStore(
         // editar estado bus 
         const putConductorEstado = async (id, estado) => {
           try {
-            let res = await axios.put(`http://localhost:4500/api/conductor/estado/${id}`, {estado:estado});
+            let res = await axios.put(`https://empresatrasporte.onrender.com/api/conductor/estado/${id}`, {estado:estado});
             return res;
           } catch (error) {
             console.log(error);
@@ -37,7 +37,7 @@ export const useConductorStore =defineStore(
         // lista de conductor
         const getConductor= async () => {
             try {
-              let res = await axios.get("http://localhost:4500/api/conductor");
+              let res = await axios.get("https://empresatrasporte.onrender.com/api/conductor");
               console.log(res);
               return res.data.conductores; 
             } catch (error) {
@@ -48,7 +48,7 @@ export const useConductorStore =defineStore(
         // eliminart conductor 
         const deleteConductor= async (id, info) => {
           try {
-            let res = await axios.delete(`http://localhost:4500/api/conductor/${id}`, info);
+            let res = await axios.delete(`https://empresatrasporte.onrender.com/api/conductor/${id}`, info);
             return res;
           } catch (error) {
             console.log(error);
